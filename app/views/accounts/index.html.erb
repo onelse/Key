@@ -1,0 +1,31 @@
+<div class="account_wrap">
+  <a class="link_back" href="/"><i class="fa fa-arrow-left"></i></a>
+  <h1 class="index_title"><%= @cate_key %></h1>
+  <div class="index-wave">
+  <table class="index_table">
+    <tbody>
+          <tr>
+          <th width="50px"></th>
+          <th>name</th>
+          <th>ID</th>
+          <th>password</th>
+          <th></th>
+        </tr>
+      <% @accounts.each do |account| %>
+        <% if account.user_id == current_user.id && account.keycate == @cate_key %>
+          <tr>
+            <td><span class="img-cate img-<%= @cate_key %>"></span></td>
+            <td><%= account.keyname%></td>
+            <td><%= account.keyid %></td>
+            <td><%= account.keypw %></td>
+            <td>
+              <a href="/accounts/<%= account.id %>/editform" class="edit_icon"></a>
+              <a href="/accounts/<%= account.id %>/destroy" method="_delete"></a>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+<br>
+</div>

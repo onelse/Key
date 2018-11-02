@@ -1,0 +1,22 @@
+<%= form_for(@account) do |f| %>
+<div class="signup-form">
+  <div class="signup-inner">
+    <div class="signup-content">
+      <h2 class="signup-title">keys</h2>
+      <div class="signup_form">
+        
+          <div class="form-inputs">
+            <input type="text" placeholder="이름" name="keyname" value="<%= @account.keyname %>">
+            <input type="text" placeholder="아이디" name="keyid" value="<%= @account.keyid %>">
+            <input type="text" placeholder="비밀번호" name="keypw" value="<%= @account.keypw %>">
+          </div>
+        
+          <div class="form-actions">
+            <input type="submit" value="+">
+          </div>
+      </div>
+      <a class="signin_link" href="/accounts/<% @account.keycate %>"><i class="fa fa-arrow-left"></i></a>
+    </div>
+  </div>
+</div>
+<% end %>

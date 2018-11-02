@@ -1,0 +1,45 @@
+<div class="newpw-wrap">
+  <div class="newpw-back"></div>
+  <h1 class="newpw-title">
+        <img src="https://i.imgur.com/037yuST.png" width="50px"><br>
+        New
+        </h1>
+    <div class="newpw-inner">
+      <div class="newpw-content">
+        <%= render 'form', account: @account %>
+      </div>
+    </div>
+  <a class="link_back" href="/"><i class="fa fa-arrow-left"></i></a>
+</div>
+<script>
+  function prevSlide(e) {
+    var field_width = $('.newpw .field').width();
+    var cur_width = $('.newpw-inner').css('margin-left').slice(0, -2);
+    var new_width = Number(cur_width) + field_width;
+    $('.newpw-inner').css('margin-left', new_width + 'px');
+  }
+  function nextSlide(e) {
+    var field_width = $('.newpw .field').width();
+    var cur_width = $('.newpw-inner').css('margin-left').slice(0, -2);
+    var new_width = Number(cur_width) - field_width;
+    $('.newpw-inner').css('margin-left', new_width + 'px');
+  }
+
+  $('.newpw .btn_wrap.prev').on('click', prevSlide);
+  $('.newpw .btn_wrap.next').on('click', nextSlide);
+  $('.new_account').keypress(function (e) {
+    if (e.which === 13) {
+      return false;
+    }
+  });
+  $('.field .newpw_inputs').keypress(function (e) {
+    if (e.which === 13 && e.target.value) {
+      nextSlide();
+    }
+  });
+</script>
+
+
+
+
+

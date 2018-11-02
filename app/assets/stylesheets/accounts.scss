@@ -1,0 +1,88 @@
+// Place all the styles related to the accounts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.newpw_box {
+    position: relative;
+    overflow: hidden;
+    margin: 30px auto 0;
+    width: 340px;
+}
+.newpw_item {
+    margin-left: 10px;
+    width: 75px;
+    height: 75px;
+    float: left; 
+}
+.newpw_item:first-child {
+    margin-left: 0;
+}
+// .newpw_item:nth-of-type(3) {
+//     margin-top: 10px;
+// }
+// .newpw_item:nth-of-type(4) {
+//     margin-top: 10px;
+// }
+.margintop-zero {
+    margin-top: 0 !important;
+}
+.newpw_label {
+    margin: 0 !important;
+    display: block;
+    width: 75px;
+    height: 75px;
+    font-size: 0 !important;
+}
+.img-cate {
+    margin: auto;
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+.index_table td {
+    padding-top: 5px;
+}
+.img-pc {
+    background: url('pc_back.png') no-repeat 50% 50%;
+    background-size: 75px 75px;
+}
+.img-wifi {
+    background: url('wifi_back.png') no-repeat 50% 50%;
+    background-size: 75px 75px;
+}
+.img-online {
+    background: url('online_back.png') no-repeat 50% 50%;
+    background-size: 75px 75px;
+}
+.img-etc {
+    background: url('etc_back.png') no-repeat 50% 50%;
+    background-size: 75px 75px;
+}
+.img-cate.img-pc {
+    background-size: 40px 40px;
+}
+.img-cate.img-wifi {
+    background-size: 40px 40px;
+}
+.img-cate.img-online {
+    background-size: 40px 40px;
+}
+.img-cate.img-etc {
+    background-size: 40px 40px;
+}
+
+
+
+
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+.newpw_radio:checked + .newpw_label {
+    border: 2px solid #11bd26;
+}

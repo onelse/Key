@@ -1,0 +1,30 @@
+<div class="signin-form">
+  <div class="signin-inner">
+    <div class="signin-content">
+      <img src="https://i.imgur.com/037yuST.png" width="115px"><br>
+      <img src="https://i.imgur.com/NWEUUDX.png" width="180px">
+      <!--<h2 class="signin-title">keys</h2>-->
+      <!--<strong class="signin-subtitle">No.1 -</strong>-->
+      
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :email, :label => 'Email',
+                      required: false,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" } %>
+          <%= f.input :password, :label => 'Password',
+                      required: false,
+                      input_html: { autocomplete: "current-password" } %>
+        </div>
+      
+        <div class="form-actions">
+          <%= f.button :submit, "Sign in" %>
+        </div>
+
+      <% end %>
+      
+      <!-- render "devise/shared/links" -->
+    </div>
+    <%= render 'accounts/widget' %>
+  </div>
+</div>
